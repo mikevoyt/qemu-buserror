@@ -1872,7 +1872,9 @@ static int usb_ohci_initfn_pci(struct PCIDevice *dev)
 typedef struct {
     SysBusDevice busdev;
     OHCIState ohci;
+    char *masterbus;
     uint32_t num_ports;
+    uint32_t firstport;
     dma_addr_t dma_offset;
 } OHCISysBusState;
 
@@ -1881,8 +1883,9 @@ static int ohci_init_pxa(SysBusDevice *dev)
     OHCISysBusState *s = FROM_SYSBUS(OHCISysBusState, dev);
 
     /* Cannot fail as we pass NULL for masterbus */
-    usb_ohci_init(&s->ohci, &dev->qdev, s->num_ports, s->dma_offset, NULL, 0,
-                  &dma_context_memory);
+    usb_ohci_init(&s->ohci, &dev->qdev, s->num_ports, s->dma_offset,
+                    s->masterbus, s->firstport,
+                    &dma_context_memory);
     sysbus_init_irq(dev, &s->ohci.irq);
     sysbus_init_mmio(dev, &s->ohci.mem);
 
@@ -1920,6 +1923,8 @@ static const TypeInfo ohci_pci_info = {
 static Property ohci_sysbus_properties[] = {
     DEFINE_PROP_UINT32("num-ports", OHCISysBusState, num_ports, 3),
     DEFINE_PROP_DMAADDR("dma-offset", OHCISysBusState, dma_offset, 3),
+    DEFINE_PROP_STRING("masterbus", OHCISysBusState, masterbus),
+    DEFINE_PROP_UINT32("firstport", OHCISysBusState, firstport, 0),
     DEFINE_PROP_END_OF_LIST(),
 };
 
