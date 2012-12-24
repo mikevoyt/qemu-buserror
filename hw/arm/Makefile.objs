@@ -32,7 +32,7 @@ obj-y += imx_serial.o imx_ccm.o imx_timer.o imx_avic.o
 obj-y += kzm.o
 obj-y += imx23_icoll.o imx23_digctl.o imx23_timrot.o
 obj-y += imx23_pinctrl.o imx23_uart.o imx23_rtc.o
-obj-y += imx23_ssp.o imx23_dma.o imx23_usb.o
+obj-y += imx23_ssp.o imx23_dma.o imx23_usb.o imx23.o
 obj-y += w1-ds18s20.o
 obj-$(CONFIG_FDT) += ../device_tree.o
 
