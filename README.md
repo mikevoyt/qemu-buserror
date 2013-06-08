@@ -13,5 +13,4 @@ arm-softmmu/qemu-system-arm -s -machine imx233o -kernel ~/zImage_dtb -serial std
 
 Where ```ArchLinuxARM-olinuxino-latest.img``` is an ArchLinux image, and the zImage_dtb kernel is configured to boot from the image.
 
-For example, the default ArchLinux distro image will work (from http://archlinuxarm.org/platforms/armv5/olinuxino) with the kernel configure to use to root filesystem on /dev/mmcblk0p2.
-
+For example, the default ArchLinux distro image will work (from http://archlinuxarm.org/platforms/armv5/olinuxino) with the kernel configure to use to root filesystem on /dev/mmcblk0p2; a working kernel is included in images/zImage_dtb_OLinuXino.
