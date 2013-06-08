@@ -8,7 +8,7 @@ To use:
 run with: 
 
 ```
-rm-softmmu/qemu-system-arm -s -machine imx233o -kernel ~/zImage_dtb -serial stdio -sd ~/ArchLinuxARM-olinuxino-latest.img
+arm-softmmu/qemu-system-arm -s -machine imx233o -kernel ~/zImage_dtb -serial stdio -sd ~/ArchLinuxARM-olinuxino-latest.img
 ```
 
 Where ```ArchLinuxARM-olinuxino-latest.img``` is an ArchLinux image, and the zImage_dtb kernel is configured to boot from the image.
