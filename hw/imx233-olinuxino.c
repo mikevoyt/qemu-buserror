@@ -18,7 +18,6 @@
     The kernel command line can also be specified with -append. However the default
     one should get a 3.x kernel booting with a working console.
  */
-#include "exec-memory.h"
 #include "arm-misc.h"
 #include "boards.h"
 #include "imx23.h"

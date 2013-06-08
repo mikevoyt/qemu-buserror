@@ -12,7 +12,7 @@
  */
 #include "sysbus.h"
 #include "imx23.h"
-#include "qemu-char.h"
+#include "include/char/char.h"
 
 #define D(w) w
 

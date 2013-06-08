@@ -7,9 +7,9 @@
  */
 
 #include "sysbus.h"
-#include "exec-memory.h"
 #include "arm-misc.h"
 #include "imx23.h"
+#include "include/exec/address-spaces.h"
 
 #define D(w)
 //#define D(w) w

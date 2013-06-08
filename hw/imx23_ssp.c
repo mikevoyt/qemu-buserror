@@ -14,7 +14,7 @@
  */
 #include "sysbus.h"
 #include "imx23.h"
-#include "blockdev.h"
+#include "include/sysemu/blockdev.h"
 #include "sd.h"
 
 /*
