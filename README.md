@@ -4,7 +4,8 @@ To use:
 
 * ./configure
 * make
-* run with: 
+
+run with: 
 
 ```
 rm-softmmu/qemu-system-arm -s -machine imx233o -kernel ~/zImage_dtb -serial stdio -sd ~/ArchLinuxARM-olinuxino-latest.img
